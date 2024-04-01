@@ -1,3 +1,6 @@
+import { textTransType } from '@/utils/rich-text-utils';
+import React from 'react';
+
 export interface ProjectDataShortType {
 	_id:string
 	projectName: string;
@@ -18,4 +21,11 @@ export interface ProjectDataType extends ProjectDataShortType {
 export interface SkillsTech {
 	label:string,
 	colorCSS:string
+}
+
+export interface SetListenerInRefArg {
+	ref:HTMLElement;
+	event:keyof DocumentEventMap;
+	cb?:(e:unknown) => unknown;
+	type?:'add' | 'remove';
 }
