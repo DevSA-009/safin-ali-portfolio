@@ -124,3 +124,7 @@ body {
 /* modal styles ref start */
 @import url('./components/modal.css');
 /* modal styles ref end */
+
+/* markdown styles ref start */
+@import url('./components/markdown.css');
+/* markdown styles ref end */
