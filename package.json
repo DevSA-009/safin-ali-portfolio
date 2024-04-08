@@ -9,21 +9,27 @@
 		"lint": "next lint"
 	},
 	"dependencies": {
-		"next": "14.1.2",
+		"@mdx-js/loader": "^3.0.1",
+		"@mdx-js/react": "^3.0.1",
+		"@mdxeditor/editor": "^2.19.0",
+		"@next/mdx": "^14.1.4",
+		"next": "14.1.4",
 		"react": "^18",
-		"react-contenteditable": "^3.3.7",
 		"react-dom": "^18",
-		"react-icons": "^5.0.1"
+		"react-icons": "^5.0.1",
+		"rehype-pretty-code": "^0.13.1",
+		"shiki": "^1.2.4"
 	},
 	"devDependencies": {
-		"@types/node": "^20",
-		"@types/react": "^18.2.62",
-		"@types/react-dom": "^18",
-		"autoprefixer": "^10.0.1",
+		"@types/mdx": "^2.0.12",
+		"@types/node": "^20.12.2",
+		"@types/react": "^18.2.73",
+		"@types/react-dom": "^18.2.23",
+		"autoprefixer": "^10.4.19",
 		"eslint": "^8",
-		"eslint-config-next": "14.1.2",
-		"postcss": "^8",
-		"tailwindcss": "^3.3.0",
-		"typescript": "^5"
+		"eslint-config-next": "14.1.4",
+		"postcss": "^8.4.38",
+		"tailwindcss": "^3.4.3",
+		"typescript": "^5.4.3"
 	}
 }
