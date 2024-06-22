@@ -3,7 +3,8 @@ import rehypePrettyCode from "rehype-pretty-code";
 
 const rehypeOptn = {
 	theme:'github-dark-default',
-	defaultLang:'typescript'
+	defaultLang:'typescript',
+	keepBackground:false
 };
 
 const withMDX = nextMDX({
