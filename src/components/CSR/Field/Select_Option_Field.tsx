@@ -1,17 +1,7 @@
 'use client';
+import type { SelectionOptionFiedProps } from '@/types/types';
 import React, { memo, useState } from 'react';
 import { IoIosArrowDown } from "react-icons/io";
-
-
-interface Props extends React.HTMLAttributes<HTMLUListElement> {
-	options: string[],
-	selValue: string,
-	stateCb: (val:string) => any,
-	icon?: JSX.Element,
-	selContainer?: React.HTMLAttributes<HTMLDivElement>,
-	selectedElement?: React.HTMLAttributes<HTMLDivElement>,
-	itemElements?: React.LiHTMLAttributes<HTMLLIElement>
-}
 
 export default memo(function Select_Option_Field({
 	options,
@@ -23,7 +13,7 @@ export default memo(function Select_Option_Field({
 	icon: Icon,
 	className,
 	...attr
-}: Props) {
+}: SelectionOptionFiedProps) {
 
 	const { className: selClassName, onClick, ...selAttr } = selectedElement || { className: '' };
 	const { className: selContainerClassName, ...selContainerAttr } = selContainer || { className: '' };
@@ -60,7 +50,7 @@ export default memo(function Select_Option_Field({
 		{ ...selAttr }
 	>
 		{
-			selValue
+			selValue.label
 		}
 	</div>
 
@@ -79,16 +69,16 @@ export default memo(function Select_Option_Field({
 		>
 			{
 				options.map((elm, idx) => <li
-					className={ `${selValue === elm ? 'bg-white/10 pointer-events-none' : ''} ${itemElmClassName || ''}` }
+					className={ `${selValue.value === elm.value ? 'bg-white/10 pointer-events-none' : ''} ${itemElmClassName || ''}` }
 					key={ idx }
 					onClick={ (e) => {
-						e.stopPropagation()
+						e.stopPropagation();
 						setVis({closeAnim:true,show})
 						stateCb(elm)
 					} }
 					{ ...itemElmAttr }
 				>
-					{ elm }
+					{ elm.label }
 				</li>)
 			}
 		</ul>

@@ -29,3 +29,18 @@ export interface SetListenerInRefArg {
 	cb?:(e:unknown) => unknown;
 	type?:'add' | 'remove';
 }
+
+export type SelectionOptionFieldValue = {
+	readonly label:string,
+	readonly value:unknown
+}
+
+export interface SelectionOptionFiedProps extends React.HTMLAttributes<HTMLUListElement> {
+	options:SelectionOptionFieldValue[],
+	selValue: Option,
+	stateCb: (opt:Option) => any,
+	icon?: JSX.Element,
+	selContainer?: React.HTMLAttributes<HTMLDivElement>,
+	selectedElement?: React.HTMLAttributes<HTMLDivElement>,
+	itemElements?: React.LiHTMLAttributes<HTMLLIElement>
+}
