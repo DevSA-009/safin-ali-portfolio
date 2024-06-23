@@ -1,5 +1,27 @@
 @tailwind base;
 
+@layer base {
+	h1{
+		@apply heading-1;
+	}
+	h2{
+		@apply heading-2;
+	}
+	h3{
+		@apply heading-3;
+	}
+	h4{
+		@apply heading-4;
+	}
+	h5{
+		@apply heading-5;
+	}
+	h6{
+		@apply heading-6;
+	}
+}
+
+
 /* elements resuable style components*/
 @import "./class-components.css";
 
@@ -8,16 +30,18 @@
 /* customize autofilled */
 input:-webkit-autofill,
 input:-webkit-autofill:focus {
-    transition: background-color 600000s 0s, color 600000s 0s;
+	transition: background-color 600000s 0s, color 600000s 0s;
 }
+
 input[data-autocompleted] {
-    background-color: transparent !important;
+	background-color: transparent !important;
 }
 
 /* customize scrllbar */
 ::-webkit-scrollbar {
 	@apply w-1;
 }
+
 ::-webkit-scrollbar-thumb {
 	@apply bg-primary-border rounded-md hover:bg-white/80 duration-200;
 }

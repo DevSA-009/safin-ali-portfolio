@@ -116,6 +116,6 @@ const config: Config = {
 	},
 	plugins: [
 		customCssUtility
-	],
+	]
 };
 export default config;
