@@ -5,12 +5,26 @@ import { GoPlusCircle } from "react-icons/go";
 import { IoIosList } from "react-icons/io";
 import Search_Field from '../Field/Search_Field';
 import Select_Option_Field from '../Field/Select_Option_Field';
+import type { SelectionOptionFieldValue } from '@/types/types';
 
-const optionsVal = ['latest', 'views', 'star'];
+const optionsVal = [
+	{
+		label:'Latest',
+		value:'latest'
+	},
+	{
+		label:'Views',
+		value:'views'
+	},
+	{
+		label:'Star',
+		value:'star'
+	}
+];
 
 export default function Blogs_Headers() {
 
-	const [selVal,setSelVal] = useState<string>(optionsVal[0])
+	const [selVal,setSelVal] = useState<SelectionOptionFieldValue>(optionsVal[0])
 
 	return (
 		<header className={ `blogs_header` }>
