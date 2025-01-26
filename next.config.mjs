@@ -1,18 +1,15 @@
-import nextMDX  from '@next/mdx';
-import rehypePrettyCode from "rehype-pretty-code";
+// const rehypeOptn = {
+// 	theme:'github-dark-default',
+// 	defaultLang:'typescript',
+// 	keepBackground:false
+// };
 
-const rehypeOptn = {
-	theme:'github-dark-default',
-	defaultLang:'typescript',
-	keepBackground:false
-};
-
-const withMDX = nextMDX({
-	options:{
-		remarkPlugins:[],
-		rehypePlugins: [[rehypePrettyCode,rehypeOptn]],
-	}
-});
+// const withMDX = nextMDX({
+// 	options:{
+// 		remarkPlugins:[],
+// 		rehypePlugins: [[rehypePrettyCode,rehypeOptn]],
+// 	}
+// });
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -29,4 +26,4 @@ const nextConfig = {
 	reactStrictMode: false
 };
 
-export default withMDX(nextConfig);
+export default nextConfig;
